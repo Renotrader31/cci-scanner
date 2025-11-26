@@ -20,7 +20,7 @@ export async function getAggregates(
   apiKey: string,
   multiplier: number = 5,
   timespan: string = 'minute',
-  limit: number = 500
+  limit: number = 2000
 ): Promise<Bar[]> {
   const to = new Date();
   const from = new Date();
@@ -29,7 +29,7 @@ export async function getAggregates(
   const fromStr = from.toISOString().split('T')[0];
   const toStr = to.toISOString().split('T')[0];
 
-  const url = `https://api.polygon.io/v2/aggs/ticker/${symbol}/range/${multiplier}/${timespan}/${fromStr}/${toStr}?adjusted=true&sort=asc&limit=${limit}&apiKey=${apiKey}`;
+  const url = `https://api.polygon.io/v2/aggs/ticker/${symbol}/range/${multiplier}/${timespan}/${fromStr}/${toStr}?adjusted=true&sort=asc&limit=2000&apiKey=${apiKey}`;
 
   try {
     const response = await fetch(url);
