@@ -385,14 +385,14 @@ export default function Home() {
                       
                       <div className="flex items-center gap-2">
                         {signal.volumeConfirmed ? (
-                          <CheckCircle className="w-4 h-4 text-green-400" title="Volume Confirmed" />
+                          <CheckCircle className="w-4 h-4 text-green-400" />
                         ) : (
-                          <XCircle className="w-4 h-4 text-gray-600" title="No Volume Confirmation" />
+                          <XCircle className="w-4 h-4 text-gray-600" />
                         )}
                         {signal.momentumConfirmed ? (
-                          <CheckCircle className="w-4 h-4 text-green-400" title="Momentum Confirmed" />
+                          <CheckCircle className="w-4 h-4 text-green-400" />
                         ) : (
-                          <XCircle className="w-4 h-4 text-gray-600" title="No Momentum Confirmation" />
+                          <XCircle className="w-4 h-4 text-gray-600" />
                         )}
                       </div>
                     </div>
